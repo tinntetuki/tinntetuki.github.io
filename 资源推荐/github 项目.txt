@@ -1,0 +1,7 @@
+【Java学习+面试指南】 一份涵盖大部分Java程序员所需要掌握的核心知识 https://gitee.com/SnailClimb/JavaGuide
+https://github.com/Snailclimb/JavaGuide
+
+
+
+Java 面试必会 直通BAT
+https://github.com/gzc426/Java-Interview
