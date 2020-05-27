@@ -1,0 +1,11 @@
+.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.class
+*.pdf
+*.iml
+*/target/*
