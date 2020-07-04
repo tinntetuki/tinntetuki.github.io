@@ -18,6 +18,9 @@ package leetcode.editor.cn;
 public class P1TwoSum{
     public static void main(String[] args){
         Solution solution = new P1TwoSum().new Solution();
+        for (int x : solution.twoSum(new int[]{1,2,3,4,5}, 4)) {
+            System.out.println(x);
+        };
     }
     //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
@@ -26,7 +29,7 @@ class Solution {
         while (left < right) {
             int sum = nums[left] + nums[right];
             if (sum == target) {
-                return new int[]{left + 1, right + 1};
+                return new int[]{left, right};
             } else if (sum < target){
                 left ++;
             } else if (sum > target) {
