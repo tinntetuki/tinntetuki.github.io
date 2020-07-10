@@ -1,6 +1,5 @@
 package com.tinntetuki.algo;
 
-import leetcode.editor.cn.P1038BinarySearchTreeToGreaterSumTree;
 
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -17,6 +16,7 @@ class Node{
     int val;
     Node left;
     Node right;
+    Node next;
     Node(int x) { val = x; }
 }
 
