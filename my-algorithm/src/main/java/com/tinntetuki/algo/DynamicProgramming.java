@@ -262,6 +262,49 @@ public class DynamicProgramming {
         return dp[sum];
     }
 
+    public int lengthOfLis(int[] nums){
+        int[] dp = new int[nums.length];
+        //dp 数组全部初始化为1
+        Arrays.fill(dp, 1);
+
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < i; j++) {
+                if (nums[i] > nums[j]) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                }
+            }
+        }
+
+        int res = 0;
+        for (int i = 0; i < dp.length; i++) {
+            res = Math.max(dp[i], res);
+        }
+
+        return res;
+    }
+
+    int maxSubArray_1(int[] nums) {
+        int n = nums.length;
+        if (n == 0){
+            return 0;
+        }
+
+        int dp_0 = nums[0];
+        int dp_1 = 0, res = dp_0;
+
+        for (int i = 1; i < n; i++){
+            // 状态转移方程
+            dp_1 = Math.max(nums[i], dp_0 + nums[i]);
+            dp_0 = dp_1;
+            // 得到 nums 的最大子数组
+            res = Math.max(dp_1, res);
+        }
+
+        return res;
+    }
+
+
+
 
     public static void main(String[] args) {
         //System.out.println(fib(60000));
