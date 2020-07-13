@@ -3,9 +3,8 @@ package com.tinntetuki.datastructure.array;
 import java.util.Objects;
 
 /**
- * @Auther: tinntetuki
- * @Date: 2020/5/24 16:38
- * @Description:
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class GenericArray<T> {
     private T[] data;

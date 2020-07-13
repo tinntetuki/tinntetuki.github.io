@@ -3,7 +3,8 @@ package com.tinntetuki.algo;
 /**
  * 高楼扔鸡蛋问题
  *
- * @Auther: tinntetuki
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class ThrowEggs {
 
@@ -12,8 +13,12 @@ public class ThrowEggs {
     }
 
     private static int dp(int k, int n) {
-        if (k == 1) return n;
-        if (n == 0) return 0;
+        if (k == 1) {
+            return n;
+        }
+        if (n == 0) {
+            return 0;
+        }
 
         //避免重复运算
        /* if (K, N) in memo:

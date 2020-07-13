@@ -1,7 +1,10 @@
 package com.tinntetuki.datastructure.skiplist;
 
 /**
- * @Auther: tinntetuki
+ * 跳跃表
+ *
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class SkipList {
 
@@ -54,7 +57,9 @@ public class SkipList {
         }
 
         // update node hight
-        if (levelCount < level) levelCount = level;
+        if (levelCount < level) {
+            levelCount = level;
+        }
     }
 
     public void delete(int value) {
@@ -90,8 +95,9 @@ public class SkipList {
     private int randomLevel() {
         int level = 1;
 
-        while (Math.random() < SKIPLIST_P && level < MAX_LEVEL)
+        while (Math.random() < SKIPLIST_P && level < MAX_LEVEL) {
             level += 1;
+        }
         return level;
     }
 

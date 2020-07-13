@@ -5,9 +5,10 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * @Auther: tinntetuki
- * @Date: 2020/5/20 23:53
- * @Description: 算法-回溯
+ * 算法-回溯
+ *
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class Backtracking {
     static List<List<Integer>> res  = new LinkedList<>();
@@ -26,9 +27,9 @@ public class Backtracking {
      * @param track
      */
     private static void backtrack(int[] nums, LinkedList<Integer> track) {
-        System.out.println(track);
+        //System.out.println(track);
 
-        // 触发结束条件
+        /// 触发结束条件
         if (track.size() == nums.length) {
             res.add(new LinkedList<Integer>(track));
             return;
@@ -53,7 +54,7 @@ public class Backtracking {
     static Stack<String> generateParenthesis(int n) {
         if (n == 0) {
             return new Stack<String>();
-        };
+        }
         // 记录所有合法的括号组合
         Stack<String> res = new Stack<>();
         // 回溯过程中的路径
@@ -65,9 +66,13 @@ public class Backtracking {
 
     private static void backtrack(int left, int right, String track, Stack<String> res) {
         // 若左括号剩下的多，说明不合法
-        if (right < left) return;
+        if (right < left) {
+            return;
+        }
         // 数量小于 0 肯定是不合法的
-        if (left < 0 || right < 0) return;
+        if (left < 0 || right < 0) {
+            return;
+        }
         // 当所有括号都恰好用完时，得到一个合法的括号组合
         if (left == 0 && right == 0) {
             res.push(track);
@@ -86,7 +91,7 @@ public class Backtracking {
     }
 
     public static void main(String[] args) {
-        //System.out.println(permute(new int[]{1,2,3,4}));
+        ///System.out.println(permute(new int[]{1,2,3,4}));
         Stack<String> res= generateParenthesis(3);
         res.forEach(c -> {
             System.out.println(c);

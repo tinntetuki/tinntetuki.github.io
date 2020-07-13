@@ -1,8 +1,10 @@
 package com.tinntetuki.datastructure.queue;
 
 /**
+ * 环形队列
  *
- * @Auther: tinntetuki
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class CircularQueue {
 

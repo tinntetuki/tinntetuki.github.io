@@ -1,9 +1,10 @@
 package com.tinntetuki.datastructure;
 
 /**
- * @Auther: tinntetuki
- * @Date: 2020/5/20 23:53
- * @Description: 数据结构-链表
+ * 数据结构-链表
+ *
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class ListNode {
     ListNode next;

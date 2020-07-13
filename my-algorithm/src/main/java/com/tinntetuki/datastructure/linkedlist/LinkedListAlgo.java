@@ -6,7 +6,9 @@ package com.tinntetuki.datastructure.linkedlist;
  * 3) 两个有序的链表合并
  * 4) 删除链表倒数第n个结点
  * 5) 求链表的中间结点
- * @Auther: tinntetuki
+ *
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class LinkedListAlgo {
     // 单链表反转

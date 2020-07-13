@@ -4,9 +4,8 @@ package com.tinntetuki.datastructure.array;
  * 1) 数组的插入、删除、按照下标随机访问操作；
  * 2）数组中的数据是int类型的；
  *
- * @Auther: tinntetuki
- * @Date: 2020/5/24 13:55
- * @Description:
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class Array {
     /**

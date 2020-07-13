@@ -1,12 +1,10 @@
 package com.tinntetuki.algo;
 
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * 计算器
  *
- * @Auther: tinntetuki
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class Calculate {
 

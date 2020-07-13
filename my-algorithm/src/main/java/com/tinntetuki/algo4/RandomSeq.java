@@ -1,9 +1,10 @@
 package com.tinntetuki.algo4;
 
-import java.util.Random;
-
 /**
- * @Auther: tinntetuki
+ * 随机数
+ *
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class RandomSeq {
 

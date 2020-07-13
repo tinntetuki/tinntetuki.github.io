@@ -1,9 +1,10 @@
 package com.tinntetuki.algo;
 
 /**
- * @Auther: tinntetuki
- * @Date: 2020/5/20 23:53
- * @Description: 算法-二分查找
+ * 算法-二分查找
+ *
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class BinarySearch {
 
@@ -36,7 +37,9 @@ public class BinarySearch {
      * @return
      */
     static int left_bound(int[] nums, int target){
-        if (checkLength(nums)) return -1;
+        if (checkLength(nums)) {
+            return -1;
+        }
         int left = 0, right = nums.length;
         while (left < right) {
             int mid = (left + right) /2;
@@ -48,8 +51,9 @@ public class BinarySearch {
                 right = mid;
             }
         }
-        if (left >= nums.length || nums[left] != target)
+        if (left >= nums.length || nums[left] != target) {
             return -1;
+        }
         return left;
     }
 
@@ -60,7 +64,9 @@ public class BinarySearch {
      * @return
      */
     static int left_bound2(int[] nums, int target){
-        if (checkLength(nums)) return -1;
+        if (checkLength(nums)) {
+            return -1;
+        }
 
         int left = 0, right = nums.length -1;
         while (left <= right) {
@@ -74,13 +80,16 @@ public class BinarySearch {
             }
         }
 
-        if (left >= nums.length || nums[left] != target)
+        if (left >= nums.length || nums[left] != target) {
             return -1;
+        }
         return left;
     }
 
     static int right_bound(int[] nums, int target){
-        if (checkLength(nums)) return -1;
+        if (checkLength(nums)) {
+            return -1;
+        }
 
         int left = 0, right = nums.length -1;
         while (left <= right) {
@@ -94,8 +103,9 @@ public class BinarySearch {
             }
         }
 
-        if (right < 0 || nums[right] != target)
+        if (right < 0 || nums[right] != target) {
             return -1;
+        }
         return right;
     }
 

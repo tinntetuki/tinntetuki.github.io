@@ -1,9 +1,10 @@
 package com.tinntetuki.datastructure.stack;
 
 /**
- * 使用前后栈实现浏览器的前进后退。
+ * 数据结构-使用前后栈实现浏览器的前进后退。
  *
- * @Auther: tinntetuki
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class SampleBrowser {
 

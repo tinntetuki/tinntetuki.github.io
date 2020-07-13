@@ -1,9 +1,10 @@
 package com.tinntetuki.datastructure.linkedlist;
 
 /**
- * @Auther: tinntetuki
- * @Date: 2020/5/24 19:28
- * @Description:
+ * LinkedList
+ *
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class SinglyLinkedList {
     private Node head = null;

@@ -19,6 +19,13 @@
   </properties>
 
   <dependencies>
+    <!-- api 接口文档 适用于前后端接口-->
+    <dependency>
+      <groupId>io.github.yedaxia</groupId>
+      <artifactId>japidocs</artifactId>
+      <version>1.4</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

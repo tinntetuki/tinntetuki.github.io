@@ -3,7 +3,9 @@ package com.tinntetuki.datastructure.sort;
 import java.util.Arrays;
 
 /**
- * @Auther: tinntetuki
+ *
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class InsertionSortAdd {
 

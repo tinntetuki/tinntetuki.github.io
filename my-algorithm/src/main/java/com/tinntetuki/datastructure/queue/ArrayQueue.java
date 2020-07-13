@@ -3,7 +3,8 @@ package com.tinntetuki.datastructure.queue;
 /**
  * 用数组实现的队列
  *
- * @Auther: tinntetuki
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class ArrayQueue {
     /**

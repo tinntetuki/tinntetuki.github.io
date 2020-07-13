@@ -5,9 +5,10 @@ import com.tinntetuki.datastructure.ListNode;
 import java.util.Arrays;
 
 /**
- * @Auther: tinntetuki
- * @Date: 2020/5/20 23:53
- * @Description: 算法-双指针
+ * 算法-双指针
+ *
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class DoublePointer {
 

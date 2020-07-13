@@ -3,9 +3,10 @@ package com.tinntetuki.algo;
 import java.util.Arrays;
 
 /**
- * 打家劫舍
+ * 算法-打家劫舍
  *
- * @Auther: tinntetuki
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class FightHome {
     // 主函数
@@ -43,8 +44,9 @@ public class FightHome {
             return 0;
         }
         // 避免重复计算
-        if (memo[start] != -1)
+        if (memo[start] != -1) {
             return memo[start];
+        }
 
         int res = Math.max(dp(nums, start + 1),
                 nums[start] + dp(nums, start + 2));
@@ -76,7 +78,9 @@ public class FightHome {
      */
     public int rob_3(int[] nums) {
         int n = nums.length;
-        if (n == 1) return nums[0];
+        if (n == 1) {
+            return nums[0];
+        }
         return Math.max(robRange(nums, 0, n - 2),
                 robRange(nums, 1, n - 1));
     }
@@ -109,8 +113,9 @@ public class FightHome {
     arr[0] 表示不抢 root 的话，得到的最大钱数
     arr[1] 表示抢 root 的话，得到的最大钱数 */
     int[] dp(Node root) {
-        if (root == null)
+        if (root == null) {
             return new int[]{0, 0};
+        }
         int[] left = dp(root.left);
         int[] right = dp(root.right);
         // 抢，下家就不能抢了

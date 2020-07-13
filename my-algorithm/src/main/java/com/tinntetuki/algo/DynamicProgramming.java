@@ -1,36 +1,34 @@
 package com.tinntetuki.algo;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import com.tinntetuki.datastructure.array.Array;
-
 import java.util.Arrays;
 import java.util.List;
 
 /**
- * 算法框架
- * # 初始化 base case
- * dp[0][0][...] = base
- * # 进行状态转移
- * for 状态1 in 状态1的所有取值：
- *     for 状态2 in 状态2的所有取值：
- *         for ...
- *             dp[状态1][状态2][...] = 求最值(选择1，选择2...)
+ * 算法-动态规划
+ *    算法框架
+ *      #初始化 base case
+ *      dp[0][0][...] = base
+ *      # 进行状态转移
+ *      for 状态1 in 状态1的所有取值：
+ *          for 状态2 in 状态2的所有取值：
+ *              for ...
+ *                  dp[状态1][状态2][...] = 求最值(选择1，选择2...)
  *
- *
- * @Auther: tinntetuki
- * @Date: 2020/5/20 23:53
- * @Description: 算法-动态规划
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class DynamicProgramming {
 
     /**
      * 斐波那契数列
      * 1.暴力递归
-     * @param N
+     * @param N 数字
      * @return
      */
     static int fib_(int N) {
-        if (N == 1 || N == 2) return 1;
+        if (N == 1 || N == 2) {
+            return 1;
+        }
         return fib(N - 1) + fib(N - 2);
     }
 
@@ -133,8 +131,9 @@ public class DynamicProgramming {
         //找到之前比当前值小的最长子序列，将长度+1为当前的最长子序列的长度
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j < i; j++) {
-                if (nums[i] > nums[j])
+                if (nums[i] > nums[j]){
                     dp[i] = Math.max(dp[i], dp[j] + 1);
+                }
             }
         }
 
@@ -169,7 +168,9 @@ public class DynamicProgramming {
             /*********************************/
 
             // 没找到合适的牌堆，新建一堆
-            if (left == piles) piles++;
+            if (left == piles) {
+                piles++;
+            }
             // 把这张牌放到牌堆顶
             top[left] = poker;
         }
@@ -183,7 +184,9 @@ public class DynamicProgramming {
      */
     static int maxSubArray(int[] nums) {
         int n = nums.length;
-        if (n == 0) return 0;
+        if (n == 0){
+            return 0;
+        }
         // base case
         int dp_0 = nums[0];
         int dp_1 = 0, res = dp_0;
@@ -235,8 +238,12 @@ public class DynamicProgramming {
      */
     static Boolean canPartition(int[] nums) {
         int sum = 0, n = nums.length;
-        for (int num : nums) sum += num;
-        if (sum % 2 != 0) return false;
+        for (int num : nums) {
+            sum += num;
+        }
+        if (sum % 2 != 0) {
+            return false;
+        }
         sum = sum / 2;
 
         Boolean[] dp = new Boolean[sum+1];
@@ -311,7 +318,7 @@ public class DynamicProgramming {
         //System.out.println(fibDp(600000000));
         //System.out.println(fibDp(600000000));
         //System.out.println(coinChange(Arrays.asList(new Integer[]{1,2,5}), 54));
-        //System.out.println(lengthOfLIS_2(new int[]{1,3,5,2,6,7,8,5,4,3}));
+        ///System.out.println(lengthOfLIS_2(new int[]{1,3,5,2,6,7,8,5,4,3}));
 
         System.out.println(canPartition(new int[]{1,2,3,4}));
     }

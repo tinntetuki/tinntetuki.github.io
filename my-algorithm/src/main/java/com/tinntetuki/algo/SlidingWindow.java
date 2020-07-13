@@ -3,6 +3,8 @@ package com.tinntetuki.algo;
 import java.util.*;
 
 /**
+ * 算法-滑动窗口
+ *
  * 建议背诵并默写这套框架，顺便背诵一下文章开头的那首诗。以后就再也不怕子串、子数组问题了好吧。
  *
  * 链表字串数组题，用双指针别犹豫
@@ -20,9 +22,8 @@ import java.util.*;
  * 一不小心滑倒了，鼻清脸肿少颗牙
  * 算法思想很简单，除了bug想升天
  *
- * @Auther: tinntetuki
- * @Date: 2020/5/20 23:53
- * @Description: 算法-滑动窗口
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class SlidingWindow {
 
@@ -268,7 +269,7 @@ public class SlidingWindow {
     }
 
     public static void main(String[] args) {
-        //System.out.println(checkInclusion("gwt", "sfasdtgwewtw"));
+        ///System.out.println(checkInclusion("gwt", "sfasdtgwewtw"));
         System.out.println(findAnagrams("sfasdtgwewgtw", "gwt"));
         System.out.println(lengthOfLongestSubstring("asdfdfdfaagasgeweegdsfghffgsfgvcx"));
     }

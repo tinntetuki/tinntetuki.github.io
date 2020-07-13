@@ -1,7 +1,10 @@
 package com.tinntetuki.datastructure.queue;
 
 /**
- * @Auther: tinntetuki
+ * 动态数组实现队列
+ *
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class DynamicArrayQueue {
 

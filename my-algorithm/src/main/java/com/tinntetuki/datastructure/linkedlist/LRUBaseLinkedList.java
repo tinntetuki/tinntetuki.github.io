@@ -3,9 +3,10 @@ package com.tinntetuki.datastructure.linkedlist;
 import java.util.Random;
 
 /**
- * @Auther: tinntetuki
- * @Date: 2020/5/24 17:03
- * @Description:
+ * LRU算法
+ *
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class LRUBaseLinkedList<T> {
 

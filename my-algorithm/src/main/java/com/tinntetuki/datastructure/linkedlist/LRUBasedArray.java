@@ -4,12 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Auther: tinntetuki
- * @Date: 2020/5/24 19:24
- * @Description:基于数组实现的LRU缓存
- *  1. 空间复杂度为O(n)
- *  2. 时间复杂度为O(n)
- *  3. 不支持null的缓存
+ * 基于数组实现的LRU缓存
+ * 1. 空间复杂度为O(n)
+ * 2. 时间复杂度为O(n)
+ * 3. 不支持null的缓存
+ *
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class LRUBasedArray<T> {
 

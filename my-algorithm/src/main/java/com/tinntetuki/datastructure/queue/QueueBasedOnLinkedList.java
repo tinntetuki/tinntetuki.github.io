@@ -1,7 +1,10 @@
 package com.tinntetuki.datastructure.queue;
 
 /**
- * @Auther: tinntetuki
+ * LinkedList实现队列
+ *
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class QueueBasedOnLinkedList {
     private Node head = null;

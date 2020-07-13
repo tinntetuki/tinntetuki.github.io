@@ -1,9 +1,10 @@
 package com.tinntetuki.datastructure.stack;
 
 /**
- * 基于链表实现的栈
+ * 数据结构-基于链表实现的栈
  *
- * @Auther: tinntetuki
+ * @author tinntetuki
+ * @since 2020/7/13
  */
 public class StackBasedOnLinkedList {
 
