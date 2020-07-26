@@ -10,11 +10,11 @@ import java.util.Arrays;
  */
 public class FightHome {
     // 主函数
-    static public int rob(int[] nums) {
+    public int rob(int[] nums) {
         return dp(nums, 0);
     }
     // 返回 nums[start..] 能抢到的最大值
-    static private int dp(int[] nums, int start) {
+    public int dp(int[] nums, int start) {
         if (start >= nums.length) {
             return 0;
         }
@@ -39,7 +39,7 @@ public class FightHome {
     }
 
     // 返回 dp[start..] 能抢到的最大值
-    private int dp_1(int[] nums, int start) {
+    public int dp_1(int[] nums, int start) {
         if (start >= nums.length) {
             return 0;
         }
@@ -55,7 +55,7 @@ public class FightHome {
         return res;
     }
 
-    int rob_2(int[] nums) {
+    public int rob_2(int[] nums) {
         int n = nums.length;
         // 记录 dp[i+1] 和 dp[i+2]
         int dp_i_1 = 0, dp_i_2 = 0;
@@ -86,7 +86,7 @@ public class FightHome {
     }
 
     // 仅计算闭区间 [start,end] 的最优结果
-    int robRange(int[] nums, int start, int end) {
+    public int robRange(int[] nums, int start, int end) {
         int n = nums.length;
         int dp_i_1 = 0, dp_i_2 = 0;
         int dp_i = 0;
@@ -104,15 +104,20 @@ public class FightHome {
      * 房子在二叉树的节点上，相连的两个房子不能同时被抢劫，果然是传说中的高智商犯罪：
      * @param root
      */
-    int rob(Node root) {
+    public int rob(Node root) {
         int[] res = dp(root);
         return Math.max(res[0], res[1]);
     }
 
-    /* 返回一个大小为 2 的数组 arr
-    arr[0] 表示不抢 root 的话，得到的最大钱数
-    arr[1] 表示抢 root 的话，得到的最大钱数 */
-    int[] dp(Node root) {
+    /**
+     * 返回一个大小为 2 的数组 arr
+     *     arr[0] 表示不抢 root 的话，得到的最大钱数
+     *     arr[1] 表示抢 root 的话，得到的最大钱数
+     *
+     * @param root
+     * @return
+     */
+    public int[] dp(Node root) {
         if (root == null) {
             return new int[]{0, 0};
         }
@@ -125,10 +130,5 @@ public class FightHome {
                 + Math.max(right[0], right[1]);
 
         return new int[]{not_rob, rob};
-    }
-
-
-    public static void main(String[] args) {
-        System.out.println(rob(new int[]{1,3,4,2,4,2,2}));
     }
 }

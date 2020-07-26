@@ -6,14 +6,15 @@ import java.util.Stack;
 
 /**
  * 算法-回溯
+ *     框架：
  *
  * @author tinntetuki
  * @since 2020/7/13
  */
 public class Backtracking {
-    static List<List<Integer>> res  = new LinkedList<>();
+    static List<List<Integer>> res = new LinkedList<>();
     
-    static List<List<Integer>> permute(int[] nums){
+    public List<List<Integer>> permute(int[] nums){
         LinkedList<Integer> track = new LinkedList<>();
         backtrack(nums, track);
         return res;
@@ -27,16 +28,13 @@ public class Backtracking {
      * @param track
      */
     private static void backtrack(int[] nums, LinkedList<Integer> track) {
-        //System.out.println(track);
-
-        /// 触发结束条件
+        // 触发结束条件
         if (track.size() == nums.length) {
             res.add(new LinkedList<Integer>(track));
             return;
         }
 
         for (int i=0; i < nums.length; i++) {
-            System.out.println(track);
             // 排除不合法的选择
             if (track.contains(nums[i])){
                 continue;
@@ -79,22 +77,19 @@ public class Backtracking {
             return;
         }
 
-        // 尝试放一个左括号
-        track += "("; // 选择
+        //尝试放一个左括号
+        track += "(";
+        //选择
         backtrack(left - 1, right, track, res);
-        track = track.substring(0, track.length() -1); // 撤消选择
+
+        // 撤消选择
+        track = track.substring(0, track.length() -1);
 
         // 尝试放一个右括号
-        track += ")"; // 选择
+        track += ")";
+        // 选择
         backtrack(left, right - 1, track, res);
-        track = track.substring(0, track.length() -1); // 撤消选择
-    }
-
-    public static void main(String[] args) {
-        ///System.out.println(permute(new int[]{1,2,3,4}));
-        Stack<String> res= generateParenthesis(3);
-        res.forEach(c -> {
-            System.out.println(c);
-        });
+        // 撤消选择
+        track = track.substring(0, track.length() -1);
     }
 }

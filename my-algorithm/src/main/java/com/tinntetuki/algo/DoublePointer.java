@@ -14,6 +14,7 @@ public class DoublePointer {
 
     /**
      * 判断链表是否有环
+     *
      * @param head
      * @return
      */
@@ -133,9 +134,4 @@ public class DoublePointer {
         return nums;
     }
 
-
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(reverse(new int[]{1,2,3,4})));
-        System.out.println(Arrays.toString(reverse(new int[]{1,2,3,4,5})));
-    }
 }

@@ -25,7 +25,7 @@ public class DynamicProgramming {
      * @param N 数字
      * @return
      */
-    static int fib_(int N) {
+    public int fib_(int N) {
         if (N == 1 || N == 2) {
             return 1;
         }
@@ -37,7 +37,7 @@ public class DynamicProgramming {
      * @param n
      * @return
      */
-    static int fib(int n){
+    public int fib(int n){
         if (n < 1) {
             return 0;
         }
@@ -45,7 +45,7 @@ public class DynamicProgramming {
         return helper(memo, n);
     }
 
-    static int helper(int[] memo, int n){
+    public int helper(int[] memo, int n){
         if (n ==1 || n== 2) {
             return 1;
         }
@@ -63,7 +63,7 @@ public class DynamicProgramming {
      * @param n
      * @return
      */
-    static int fibDp(int n){
+    public int fibDp(int n){
         int[] dp = new int[n+1];
         dp[1] = dp[2] = 1;
         for (int i=3; i<=n; i++){
@@ -77,7 +77,7 @@ public class DynamicProgramming {
      * @param n
      * @return
      */
-    static int fib1(int n){
+    public int fib1(int n){
         if (n==1 || n==2) {
             return 1;
         }
@@ -96,7 +96,7 @@ public class DynamicProgramming {
      * @param amount
      * @return
      */
-    static int coinChange(List<Integer> coins, int amount){
+    public int coinChange(List<Integer> coins, int amount){
         int[] dp = new int[amount+1];
         for (int i =0; i<dp.length; i++) {
             dp[i] = amount +1;
@@ -123,7 +123,7 @@ public class DynamicProgramming {
      * @param nums
      * @return
      */
-    public static int lengthOfLIS(int[] nums) {
+    public int lengthOfLIS(int[] nums) {
         int[] dp = new int[nums.length];
         // base case：dp 数组全都初始化为 1
         Arrays.fill(dp, 1);
@@ -145,7 +145,7 @@ public class DynamicProgramming {
         return res;
     }
 
-    public static int lengthOfLIS_2(int[] nums) {
+    public int lengthOfLIS_2(int[] nums) {
         int[] top = new int[nums.length];
         // 牌堆数初始化为 0
         int piles = 0;
@@ -182,7 +182,7 @@ public class DynamicProgramming {
      * 动态规划设计：最大子数组
      * @param nums
      */
-    static int maxSubArray(int[] nums) {
+    public int maxSubArray(int[] nums) {
         int n = nums.length;
         if (n == 0){
             return 0;
@@ -209,7 +209,7 @@ public class DynamicProgramming {
      * 给你一个可装载重量为 W 的背包和 N 个物品，每个物品有重量和价值两个属性。其中第 i 个物品的重量为 wt[i]，价值为 val[i]，现在让你用这个背包装物品，最多能装的价值是多少？
      * @param
      */
-    static int knapsack (int W, int N, int[] wt, int[] val){
+    public int knapsack (int W, int N, int[] wt, int[] val){
         //int knapsack(int W, int N, vector<int>& wt, vector<int>& val) {
         //    // base case 已初始化
         //    vector<vector<int>> dp(N + 1, vector<int>(W + 1, 0));
@@ -236,7 +236,7 @@ public class DynamicProgramming {
      * 416.分割等和子集
      * @param nums
      */
-    static Boolean canPartition(int[] nums) {
+    public Boolean canPartition(int[] nums) {
         int sum = 0, n = nums.length;
         for (int num : nums) {
             sum += num;
@@ -290,7 +290,7 @@ public class DynamicProgramming {
         return res;
     }
 
-    int maxSubArray_1(int[] nums) {
+    public int maxSubArray_1(int[] nums) {
         int n = nums.length;
         if (n == 0){
             return 0;
@@ -308,18 +308,5 @@ public class DynamicProgramming {
         }
 
         return res;
-    }
-
-
-
-
-    public static void main(String[] args) {
-        //System.out.println(fib(60000));
-        //System.out.println(fibDp(600000000));
-        //System.out.println(fibDp(600000000));
-        //System.out.println(coinChange(Arrays.asList(new Integer[]{1,2,5}), 54));
-        ///System.out.println(lengthOfLIS_2(new int[]{1,3,5,2,6,7,8,5,4,3}));
-
-        System.out.println(canPartition(new int[]{1,2,3,4}));
     }
 }

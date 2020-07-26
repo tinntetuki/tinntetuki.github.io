@@ -92,21 +92,6 @@ public class Bag {
         return dp[n][amount];
     }
 
-    int change_1(int amount, int[] coins){
-        int n = coins.length;
-        int[] dp = new int[amount + 1];
-        dp[0] = 1;
-
-        for (int i = 0; i< n; i++) {
-            for (int j = 1; j <= amount; j++) {
-                if (j - coins[i] >= 0) {
-                    dp[j] = dp[j] + dp[j - coins[i]];
-                }
-            }
-        }
-        return dp[amount];
-    }
-
     /**
      * 416. 分割等和子集
      * 给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
@@ -142,31 +127,22 @@ public class Bag {
         }
 
         int n = nums.length;
-        sum = sum/2;
-        boolean[][] dp = new boolean[n+1][sum+1];
+        sum = sum / 2;
+        boolean[][] dp = new boolean[n + 1][sum + 1];
         for (int i = 0; i < n; i++) {
             dp[i][0] = true;
         }
 
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= sum; j++) {
-                if (j - nums[i-1] < 0) {
-                    dp[i][j] = dp[i-1][j];
+                if (j - nums[i - 1] < 0) {
+                    dp[i][j] = dp[i - 1][j];
                 } else {
-                    dp[i][j] = dp[i-1][j] || dp[i-1][j - nums[i-1]];
+                    dp[i][j] = dp[i - 1][j] || dp[i - 1][j - nums[i - 1]];
                 }
             }
         }
         return dp[n][sum];
-    }
-
-
-
-    public static void main(String[] args) {
-        Bag bag = new Bag();
-        //System.out.println(bag.knapsack(3,3, new int[]{1,2,3}, new int[]{3,2,6}));
-        ///System.out.println(bag.change_1(5, new int[]{1, 2, 5}));
-        System.out.println(bag.canPartition(new int[]{1,2,3,4,18}));
     }
 
 }

@@ -32,7 +32,7 @@ public class SlidingWindow {
      * @param s
      * @param t
      */
-    static void slidingWindow(String s, String t){
+    public void slidingWindow(String s, String t){
         Map<Character, Integer> need = new HashMap<>();
         Map<Character, Integer> window = new HashMap<>();
 
@@ -81,7 +81,7 @@ public class SlidingWindow {
      * @param t
      * @return
      */
-    static String minWindow(String s, String t){
+    public String minWindow(String s, String t){
         Map<Character, Integer> need = new HashMap<>();
         Map<Character, Integer> window = new HashMap<>();
         for (char c : t.toCharArray()) {
@@ -140,7 +140,7 @@ public class SlidingWindow {
      * @param s
      * @return
      */
-    static Boolean checkInclusion(String t, String s) {
+    public Boolean checkInclusion(String t, String s) {
         // 判断 s 中是否存在 t 的排列
         Map<Character, Integer> need = new HashMap<>();
         Map<Character, Integer> window = new HashMap<>();
@@ -194,7 +194,7 @@ public class SlidingWindow {
      * @param t
      * @return
      */
-    static Integer[] findAnagrams(String s, String t) {
+    public Integer[] findAnagrams(String s, String t) {
         Map<Character, Integer> need = new HashMap<>();
         Map<Character, Integer> window = new HashMap<>();
 
@@ -244,7 +244,7 @@ public class SlidingWindow {
      * @param s
      * @return
      */
-    static int lengthOfLongestSubstring(String s) {
+    public int lengthOfLongestSubstring(String s) {
         Map<Character, Integer> window = new HashMap<>();
 
         int left = 0, right = 0;
@@ -266,11 +266,5 @@ public class SlidingWindow {
         }
 
         return res;
-    }
-
-    public static void main(String[] args) {
-        ///System.out.println(checkInclusion("gwt", "sfasdtgwewtw"));
-        System.out.println(findAnagrams("sfasdtgwewgtw", "gwt"));
-        System.out.println(lengthOfLongestSubstring("asdfdfdfaagasgeweegdsfghffgsfgvcx"));
     }
 }

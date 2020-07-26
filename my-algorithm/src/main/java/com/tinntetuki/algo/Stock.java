@@ -13,7 +13,7 @@ public class Stock {
      * @param prices
      * @return
      */
-    static int maxProfit(int[] prices) {
+    public int maxProfit(int[] prices) {
         int n = prices.length;
         int[][] dp = new int[n][2];
         for (int i = 0; i < n; i++) {
@@ -37,8 +37,12 @@ public class Stock {
         return dp[n - 1][0];
     }
 
-    // k == 1
-    static int maxProfit_k_1(int[] prices) {
+    /**
+     * k == 1
+     * @param prices
+     * @return
+     */
+    public int maxProfit_k_1(int[] prices) {
         int n = prices.length;
         // base case: dp[-1][0] = 0, dp[-1][1] = -infinity
         int dp_i_0 = 0, dp_i_1 = Integer.MIN_VALUE;
@@ -56,7 +60,7 @@ public class Stock {
      * @param prices
      * @return
      */
-    static int maxProfit_k_inf(int[] prices) {
+    public int maxProfit_k_inf(int[] prices) {
         int n = prices.length;
         int dp_i_0 = 0, dp_i_1 = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
@@ -77,7 +81,7 @@ public class Stock {
      *
      * @param prices
      */
-    static int maxProfit_with_cool(int[] prices) {
+    public int maxProfit_with_cool(int[] prices) {
         int n = prices.length;
         int dp_i_0 = 0, dp_i_1 = Integer.MIN_VALUE;
         int dp_pre_0 = 0; // 代表 dp[i-2][0]
@@ -97,7 +101,7 @@ public class Stock {
      * @param fee
      * @return
      */
-    static int maxProfit_with_fee(int[] prices, int fee) {
+    public int maxProfit_with_fee(int[] prices, int fee) {
         int n = prices.length;
         int dp_i_0 = 0, dp_i_1 = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
@@ -112,7 +116,7 @@ public class Stock {
      * 第五题，k = 2
      * @param prices
      */
-    static int maxProfit_k_2(int[] prices) {
+    public int maxProfit_k_2(int[] prices) {
         //dp[i][2][0] = max(dp[i-1][2][0], dp[i-1][2][1] + prices[i])
         //dp[i][2][1] = max(dp[i-1][2][1], dp[i-1][1][0] - prices[i])
         //dp[i][1][0] = max(dp[i-1][1][0], dp[i-1][1][1] + prices[i])
@@ -144,7 +148,7 @@ public class Stock {
      * 第六题，k = any integer
      * @param max_k
      */
-    int maxProfit_k_any(int max_k, int[] prices) {
+    public int maxProfit_k_any(int max_k, int[] prices) {
         int n = prices.length;
         if (max_k > n / 2) {
             return maxProfit_k_inf(prices);
@@ -161,8 +165,4 @@ public class Stock {
         return dp[n - 1][max_k][0];
     }
 
-
-    public static void main(String[] args) {
-        System.out.println(maxProfit_with_fee(new int[]{2,4,3,1,5}, 1));
-    }
 }

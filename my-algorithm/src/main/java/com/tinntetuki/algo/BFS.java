@@ -1,7 +1,5 @@
 package com.tinntetuki.algo;
 
-import leetcode.editor.cn.P1038BinarySearchTreeToGreaterSumTree;
-
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -34,8 +32,9 @@ public class BFS {
             for (int i = 0; i < sz; i++) {
                 Node cur = q.poll();
                 /* 划重点：这里判断是否到达终点 */
-                if (cur == target)
-                return step;
+                if (cur == target){
+                    return step;
+                }
                 /* 将 cur 的相邻节点加入队列 */
                 /*for (Node x : cur)
                     if (x not in visited) {
@@ -43,7 +42,7 @@ public class BFS {
                     visited.add(x);
                 }*/
             }
-            /* 划重点：更新步数在这里 */
+            //划重点：更新步数在这里
             step++;
         }
         return 0;
@@ -82,7 +81,9 @@ public class BFS {
     }*/
 
     int minDepth(Node root) {
-        if (root == null) return 0;
+        if (root == null) {
+            return 0;
+        }
         LinkedBlockingQueue<Node> q = new LinkedBlockingQueue<>();
         q.offer(root);
         // root 本身就是一层，depth 初始化为 1
@@ -94,13 +95,16 @@ public class BFS {
             for (int i = 0; i < sz; i++) {
                 Node cur = q.poll();
                 /* 判断是否到达终点 */
-                if (cur.left == null && cur.right == null)
+                if (cur.left == null && cur.right == null){
                     return depth;
+                }
                 /* 将 cur 的相邻节点加入队列 */
-                if (cur.left != null)
+                if (cur.left != null) {
                     q.offer(cur.left);
-                if (cur.right != null)
+                }
+                if (cur.right != null) {
                     q.offer(cur.right);
+                }
             }
             /* 这里增加步数 */
             depth++;
@@ -117,7 +121,10 @@ public class BFS {
     int openLock(String[] deadends, String target) {
         // 记录需要跳过的死亡密码
         Set<String> deads = new HashSet<>();
-        for (String s : deadends) deads.add(s);
+        for (String s : deadends) {
+            deads.add(s);
+        }
+
         // 记录已经穷举过的密码，防止走回头路
         Set<String> visited = new HashSet<>();
         Queue<String> q = new LinkedList<>();
@@ -133,10 +140,12 @@ public class BFS {
                 String cur = q.poll();
 
                 /* 判断是否到达终点 */
-                if (deads.contains(cur))
+                if (deads.contains(cur)) {
                     continue;
-                if (cur.equals(target))
+                }
+                if (cur.equals(target)) {
                     return step;
+                }
 
                 /* 将一个节点的未遍历相邻节点加入队列 */
                 for (int j = 0; j < 4; j++) {
@@ -162,19 +171,28 @@ public class BFS {
     // 将 s[j] 向上拨动一次
     String plusOne(String s, int j) {
         char[] ch = s.toCharArray();
-        if (ch[j] == '9')
+        if (ch[j] == '9') {
             ch[j] = '0';
-        else
+        }
+        else {
             ch[j] += 1;
+        }
         return new String(ch);
     }
-    // 将 s[i] 向下拨动一次
+
+    /**
+     * 将 s[i] 向下拨动一次
+     * @param s
+     * @param j
+     * @return
+     */
     String minusOne(String s, int j) {
         char[] ch = s.toCharArray();
-        if (ch[j] == '0')
+        if (ch[j] == '0') {
             ch[j] = '9';
-        else
+        } else {
             ch[j] -= 1;
+        }
         return new String(ch);
     }
 

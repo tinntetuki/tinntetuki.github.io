@@ -12,7 +12,7 @@ public class ThrowEggs {
         return dp(k, n);
     }
 
-    private static int dp(int k, int n) {
+    public static int dp(int k, int n) {
         if (k == 1) {
             return n;
         }
@@ -37,9 +37,5 @@ public class ThrowEggs {
         memo[(K, N)] = res
         return res*/
         return 0;
-    }
-
-    public static void main(String[] args) {
-
     }
 }
