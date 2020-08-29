@@ -14,6 +14,10 @@ public class ListNode {
         super();
     }
 
+    public ListNode(int val) {
+        this.val = val;
+    }
+
     public ListNode getNext() {
         return next;
     }
@@ -28,5 +32,17 @@ public class ListNode {
 
     public void setVal(int val) {
         this.val = val;
+    }
+
+    ListNode reverse(ListNode head){
+        if (head.next == null) {
+            return head;
+        }
+
+        ListNode last = reverse(head);
+        head.next.next = head;
+        head.next = null;
+
+        return last;
     }
 }
