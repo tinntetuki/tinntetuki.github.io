@@ -1,5 +1,7 @@
 package com.tinntetuki.demo;
 
+import com.tinntetuki.intf.MyClient;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,6 +16,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @RestController
 @RequestMapping("/user")
 public class UserController {
+
 
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public User getUser(HttpServletRequest request, @PathVariable Integer id) {
