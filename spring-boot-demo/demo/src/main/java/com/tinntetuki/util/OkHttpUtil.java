@@ -37,7 +37,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class OkHttpUtil {
 
     static OkHttpClient client = new OkHttpClient();
-    static Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("3.142.82.250", 9999));
+    static Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("", 9999));
 
     public static String run(String url, String ... params) throws IOException {
         url = getString(url, params);

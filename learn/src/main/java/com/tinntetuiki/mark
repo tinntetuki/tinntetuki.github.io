@@ -1,0 +1,85 @@
+1 Volatile  --- MyVolatileTest
+2 CAS       --- CASDemo
+    unsafe 内存偏移量
+    缺点
+        循环时间长，开销大
+        只能保证一个变量的原子性
+        ABA问题  加版本号         ABADemo
+            原子引用更新          AtomicReferenceDemo
+            时间戳原子引用
+3 集合类不安全的问题
+    ContainerNotSafeDemo  java.util.ConcurrentModificationException
+4 公平锁  按照申请的顺序获取锁
+  非公平锁 直接尝试直接占有锁，占有失败，在按照公平锁的模式
+    吞吐量大
+    饥饿现象
+  --------------------
+  可重入锁（递归锁）
+    ReenterLockDemo
+  独占锁/共享锁
+    ReadWriteLockDemo
+  自旋锁
+    SpinLockDemo
+5 CountDownLatchDemo    初始值是默认值，减到0开始   countDown  await
+  CyclicBarrierDemo     初始值是0，加到默认值开始   循环屏障  await
+  SemaphoreDemo
+6 队列 BlockQueueDemo
+    ArrayBlockingQueue          数组有界
+    LinkedBlockingQueue         链表有界（Integer.Max）
+    PriorityBlockingQueue       优先级无界
+    DelayQueue                  延时无界
+    SynchronousQueue            单一元素的队列
+    LinkedTransferQueue         链表无界
+    LinkedBlockingDeque         链表双端队列
+
+    -------------------------------------------------
+    方法类型     抛异常         特殊值        阻塞          超时
+    插入        add(e)        offer(e)     put(e)        offer(e, time, unit)
+    移除        remove()      poll()       take()        poll(time, unit)
+    检查        element()     peek()       不可用         不可用
+
+7 生消模式  ProdConsumer_TraditionDemo
+
+8 Callable
+9 线程池
+    MyThreadPoolDemo
+        Executors.newFixedThreadPool
+        Executors.newSingleThreadExecutor
+        Executors.newCachedThreadPool
+
+    ThreadPoolExecutor(int corePoolSize,
+                      int maximumPoolSize,
+                      long keepAliveTime,
+                      TimeUnit unit,
+                      BlockingQueue<Runnable> workQueue,
+                      ThreadFactory threadFactory,
+                      RejectedExecutionHandler handler)
+
+
+10 死锁 DeadLockDemo
+
+11 JVM
+    垃圾回收算法
+        引用计数法       --循环引用
+        复制
+        标记清除        --内存碎片
+        标记整理
+    GCRoot
+        static
+        final
+        栈中的局部变量
+        虚拟机栈中的对象
+
+    参数类型
+        标配参数  -version -help
+        X参数     -Xint  -Xcomp   -Xmixed
+        XX参数
+
+    HelloGC
+
+
+
+
+
+
+
