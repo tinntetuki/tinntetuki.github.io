@@ -2,12 +2,7 @@
 
 ## 1.www.jetbrains.com 代码编辑工具免费申请
 
-### 1.1[项目地址](https://www.jetbrains.com/?from=tinntetuki.github.io)
-~~~text
-个人推荐
-~~~
-
-### 1.2[通过Github项目免费申请](https://blog.csdn.net/boling_cavalry/article/details/100014835)
+### 1.1[通过Github项目免费申请](https://blog.csdn.net/boling_cavalry/article/details/100014835)
 
 引用自：程序员欣宸的公众号
 

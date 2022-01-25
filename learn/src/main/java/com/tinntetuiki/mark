@@ -77,7 +77,21 @@
 
     HelloGC
 
+    NewRatio
 
+    -----------------------------
+    Serial  ParNew Parallel        新生代
+                                        G1
+    CMS SerialOld  ParallelOld     老生代
+    ------------------------------
+
+
+Redis
+    String
+    List
+    Set
+    HashMap
+    SortSet
 
 
 
